@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import Navbar from "./navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-
-    </>
-  )
+    <div>
+      <Navbar />
+      <h1>Welcome to Book Wallet</h1>
+    </div>
+  );
 }
 
-export default App
+export default App;
