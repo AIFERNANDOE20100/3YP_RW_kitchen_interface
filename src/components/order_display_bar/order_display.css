@@ -1,0 +1,118 @@
+.order-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Order details row */
+.order-info,
+.menu-info {
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item-details {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    gap: 15px;
+}
+
+.item-name,
+.special-instruction,
+.customer-details {
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+}
+
+/* More button */
+.more-button {
+    width: 5%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate arrow when expanded */
+.more-button.rotated {
+    transform: rotate(180deg);
+}
+
+/* Checkbox alignment */
+.complete-checkbox {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hidden order details */
+.extra-details {
+    display: none; /* Initially hidden */
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Show extra details when expanded */
+.order-bar.expanded .extra-details {
+    display: block;
+}
+
+/* Expanded order bar */
+.order-bar.expanded {
+    padding-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .order-info,
+    .menu-info,
+    .more-button,
+    .complete-checkbox {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .item-details {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .extra-details {
+        text-align: center;
+    }
+}
