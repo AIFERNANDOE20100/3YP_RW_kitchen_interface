@@ -36,7 +36,7 @@ function App() {
       <Sidebar selected={selected} onSelect={setSelected} />
       
       <div style={{ flex: 1, padding: "20px" }}>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <h2>Current Orders</h2>
         {orders.map((order, index) => (
