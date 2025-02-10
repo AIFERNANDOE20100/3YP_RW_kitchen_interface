@@ -1,9 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Navbar from "./components/navigation_bar/navbar.jsx";
-import OrderBar from "./components/order_display_bar/order_display.jsx";
+import OrderBar from "./components/order_display_bar/current_display_bar/currrent_order_display.jsx";
 import CompletedOrderBar from "./components/order_display_bar/completed_display_bar/completed_order_display.jsx";
-import CustomButton from "./components/buttons/CustomButton.jsx"; // Import Custom Button
 import Sidebar from "./components/side_option_bar/sidebar.jsx";
 
 function App() {
@@ -32,11 +30,10 @@ function App() {
   const [selected, setSelected] = useState("current");
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className="App">
       <Sidebar selected={selected} onSelect={setSelected} />
       
-      <div style={{ flex: 1, padding: "20px" }}>
-        {/* <Navbar /> */}
+      <div className="orders">
 
         <h2>Current Orders</h2>
         {orders.map((order, index) => (
@@ -48,14 +45,9 @@ function App() {
           <CompletedOrderBar key={index} order={order} />
         ))}
 
-        {/* Custom Button */}
-        <div className="button-container">
-          <CustomButton text="Add Order" color="green" size="18px" onClick={handleButtonClick} />
-        </div>
       </div>
     </div>
   );
 }
 
 export default App;
-

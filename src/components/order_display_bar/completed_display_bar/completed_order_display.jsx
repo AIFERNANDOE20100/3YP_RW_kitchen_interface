@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./completed_order_display.css";
+import CustomButton from "../../buttons/custom_button.jsx";
 
 const CompletedOrderBar = ({ order }) => {
   const [expanded, setExpanded] = useState(false);
@@ -26,7 +27,7 @@ const CompletedOrderBar = ({ order }) => {
       </div>
 
       {/* Undo Button */}
-      <button className="undo-button">Undo</button>
+      <CustomButton label="Undo" bgColor="red" textColor="white" borderRadius={10} padding={10}/>
 
       {/* Extra Order Details (Visible When Expanded) */}
       {expanded && (
