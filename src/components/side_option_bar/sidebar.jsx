@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 
 const Sidebar = ({ selected, onSelect }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="sidebar-container">
