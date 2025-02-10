@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./order_display.css";
+import "./current_order_display.css";
+import CustomButton from "../../buttons/custom_button.jsx";
 
 const OrderBar = ({ order }) => {
   const [expanded, setExpanded] = useState(false);
@@ -25,8 +26,8 @@ const OrderBar = ({ order }) => {
         &#9660;
       </div>
 
-      {/* Completion Checkbox */}
-      <input type="checkbox" className="complete-checkbox" />
+      {/* Completion button */}
+      <CustomButton label="Done" bgColor="green" textColor="white" borderRadius={10} padding={10}/>
 
       {/* Extra Order Details (Visible When Expanded) */}
       {expanded && (
