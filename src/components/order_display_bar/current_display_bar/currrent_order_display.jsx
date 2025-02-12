@@ -8,8 +8,12 @@ const OrderBar = ({ order }) => {
   return (
     <div className={`order-bar ${expanded ? "expanded" : ""}`}>
       {/* Order Number and Menu Number */}
-      <div className="order-info">{order.orderNumber}</div>
-      <div className="menu-info">{order.menuNumber}</div>
+      <div className="order-info">
+        <strong className="Order-No">Order No:</strong> {order.orderNumber}
+      </div>
+      <div className="menu-info">
+        <strong className="Menu-No">Menu No:</strong> {order.menuNumber}
+      </div>
 
       {/* Item Details */}
       <div className="item-details">
@@ -34,7 +38,6 @@ const OrderBar = ({ order }) => {
         <div className="extra-details">
           <p><strong>Order Time:</strong> {order.orderTime}</p>
           <p><strong>Payment Status:</strong> {order.paymentStatus}</p>
-          <p><strong>Additional Notes:</strong> {order.additionalNotes}</p>
         </div>
       )}
     </div>
