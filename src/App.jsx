@@ -31,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <Sidebar selected={selected} onSelect={setSelected} />
       
       <div className="orders">

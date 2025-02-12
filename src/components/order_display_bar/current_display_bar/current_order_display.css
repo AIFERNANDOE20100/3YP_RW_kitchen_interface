@@ -21,9 +21,16 @@
 /* Order details row */
 .order-info,
 .menu-info {
-    width: 10%;
-    text-align: center;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  padding: 0 10px;
+}
+
+.Order-No,
+.Menu-No {
+  font-size: 14px;
+  color: #6c757d;
 }
 
 .item-details {
