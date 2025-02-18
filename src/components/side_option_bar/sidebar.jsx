@@ -1,9 +1,21 @@
-// Sidebar.jsx
 import React, { useState } from "react";
 import "./Sidebar.css";
 
 const Sidebar = ({ selected, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleHistoryClick = () => {
+    // Navigate in the same window to the history page
+    window.location.href = "/history";
+  };
+
+  const handleCurrentOrdersClick = () => {
+    // If the user is on the history page, navigate back to the main page
+    if (window.location.pathname === "/history") {
+      window.location.href = "/";
+    }
+    onSelect("current");
+  };
 
   return (
     <div className="sidebar-container">
@@ -14,7 +26,7 @@ const Sidebar = ({ selected, onSelect }) => {
         <ul className="sidebar-menu">
           <li
             className={selected === "current" ? "active" : ""}
-            onClick={() => onSelect("current")}
+            onClick={handleCurrentOrdersClick}
           >
             Current Orders
           </li>
@@ -26,7 +38,7 @@ const Sidebar = ({ selected, onSelect }) => {
           </li>
           <li
             className={selected === "history" ? "active" : ""}
-            onClick={() => onSelect("history")}
+            onClick={handleHistoryClick}
           >
             History
           </li>

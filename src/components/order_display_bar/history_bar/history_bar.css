@@ -1,0 +1,104 @@
+/* Order Bar Container */
+.order-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Expanded State */
+  .order-bar.expanded {
+    background-color: #e9ecef;
+  }
+  
+  /* Order and Menu Number */
+  .order-info,
+  .menu-info {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    padding: 0 10px;
+  }
+
+  .Order-No,
+  .Menu-No {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  /* Item Details */
+  .item-details {
+    flex: 1;
+    text-align: left;
+    padding: 0 10px;
+  }
+  
+  .item-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .special-instruction {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .customer-details {
+    font-size: 14px;
+    color: #495057;
+  }
+  
+  /* More Button (Dropdown Toggle) */
+  .more-button {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .more-button.rotated {
+    transform: rotate(180deg);
+  }
+  
+  /* Undo Button */
+  .undo-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .undo-button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Extra Order Details (Visible in Expanded Mode) */
+  .extra-details {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f1f3f5;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .extra-details p {
+    margin: 4px 0;
+  }
+  
+  /* Checkbox (Hidden) */
+  .complete-checkbox {
+    display: none;
+  }
+  
